@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "appName": "A RN-APP",
+  "appId": "com.sample.app",
+  "packageName": "sampleApp",
+  "_iOSTeamId": "8ALC9Q43AC",
+  "_iOSSupportDevices": ["iPhone", "iPad"]
+}

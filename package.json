@@ -1,0 +1,62 @@
+{
+  "name": "sampleApp",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-react-native": "^2.0.0",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest-expo": "~20.0.0",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "reactotron-react-native": "^1.12.3"
+  },
+  "scripts": {
+    "configureJPush": "node node_modules/jpush-react-native/JPushConfiguration.js",
+    "start": "react-native start",
+    "android": "npm run clean && npm run build-config && react-native run-android",
+    "ios": "npm run clean && npm run build-config && react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "clean": "rm -rf ./ios/build && rm -rf ./android/build",
+    "build": "npm run clean && npm run build-config && npm run archive",
+    "build-config": "./build/build.js",
+    "archive": "./build/archive.js",
+    "build-ios": "react-native bundle --platform ios --assets-dest ./ios/bundle --dev false --entry-file index.ios.js --bundle-output ./ios/bundle/main.jsbundle",
+    "build-android": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res"
+  },
+  "engines": {
+    "node": "6.11.1"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^5.1.0",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-plugin-transform-remove-console": "^6.8.5",
+    "decimal.js": "^7.2.3",
+    "jcore-react-native": "^1.1.8-beta2",
+    "jpush-react-native": "^2.1.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "native-base": "^2.3.1",
+    "node-notifier": "^5.1.2",
+    "qs": "^6.5.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.47.0",
+    "react-native-device-info": "^0.11.0",
+    "react-native-elements": "^0.17.0",
+    "react-native-image-zoom-viewer": "^2.0.10",
+    "react-native-loading-spinner-overlay": "^0.5.1",
+    "react-native-mail": "^3.0.4",
+    "react-native-phone-call": "^1.0.4",
+    "react-native-prompt": "^1.0.0",
+    "react-native-splash-screen": "^3.0.1",
+    "react-native-swiper": "^1.5.12",
+    "react-native-vector-icons": "^4.4.0",
+    "react-navigation": "^1.0.0-beta.13",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-persist": "^4.9.1",
+    "redux-saga": "^0.15.6",
+    "shelljs": "^0.7.8"
+  }
+}
